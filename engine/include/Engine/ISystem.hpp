@@ -2,17 +2,20 @@
 
 #include <splice/splice.hpp>
 
-struct SystemContext;
-
-class ISystem
+namespace grid
 {
-public:
-  virtual ~ISystem() = default;
+  struct SystemContext;
 
-  virtual void on_start(SystemContext &context) { };
-  virtual void on_tick(SystemContext &context) { };
-  virtual void on_frame(SystemContext &context) { };
-  virtual void on_shutdown(SystemContext &context) { };
+  class ISystem
+  {
+  public:
+    virtual ~ISystem() = default;
 
-  virtual int priority() const { return 50; }
-};
+    virtual void on_start(SystemContext &context) { };
+    virtual void on_tick(SystemContext &context) { };
+    virtual void on_frame(SystemContext &context) { };
+    virtual void on_stop(SystemContext &context) { };
+
+    virtual int priority() const { return 50; }
+  };
+} // namespace grid
