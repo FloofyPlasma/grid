@@ -24,7 +24,7 @@ include(cmake/CPM.cmake)
 CPMAddPackage("gh:libsdl-org/SDL#release-3.4.2")
 CPMAddPackage("gh:bkaradzic/bgfx.cmake@1.142.9197-527")
 CPMAddPackage("gh:skypjack/entt#9c5281c79a241ec810f999ad9675fa32f51f934f")
-CPMAddPackage("gh:floofyplasma/splice#ceb48368cc626bade29f7a018275a59c702e5ee4")
+CPMAddPackage("gh:floofyplasma/splice#main")
 
 add_subdirectory(engine)
 add_subdirectory(game)

@@ -44,9 +44,7 @@ namespace grid
     {
       if (auto *input = dynamic_cast<input::InputSystem *>(system.get()))
       {
-        // FIXME: This may be a bug with splice here...
-        // g_input->dispatch<^^input::InputSystem::on_frame>(input, ctx);
-        input->on_frame(ctx);
+        g_input->dispatch<^^input::InputSystem::on_frame>(input, ctx);
       } else
       {
         system->on_frame(ctx);
